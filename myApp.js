@@ -2,6 +2,10 @@ const express = require('express');
 const helmet = require('helmet');
 const bcrypt = require("bcrypt");
 
+app.get("/", (req, res) => {
+  res.send("Hola bcrypt");
+});
+
 
 ninetyDaysInSeconds = 90*24*60*60;
 
