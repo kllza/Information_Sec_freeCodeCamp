@@ -65,16 +65,6 @@ app.use(function (req, res, next) {
   res.status(404).type("txt").send("Not Found");
 });
 
-const bcrypt = require('bcrypt');
-
-app.get("/hash", async (req, res) => {
-  const password = "FreeCodeCampRocks"; // puedes usar cualquier texto
-  const saltRounds = 12;
-
-  const hash = await bcrypt.hash(password, saltRounds);
-  res.send(hash);
-});
-
 
 module.exports = app;
 
