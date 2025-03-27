@@ -33,6 +33,19 @@ app.use(helmet({
 }))
 
 
+const bcrypt = require("bcrypt");
+
+
+app.get("/hash", async (req, res) => {
+  const password = "FreeCodeCampRocks"; 
+  const saltRounds = 12;
+
+  const hash = await bcrypt.hash(password, saltRounds);
+  res.send(hash);
+});
+
+
+module.exports = app;
 
 
 
