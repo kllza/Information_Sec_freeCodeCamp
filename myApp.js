@@ -33,7 +33,7 @@ app.use(helmet({
 }))
 
 
-const bcrypt = require("bcrypt");
+const bcrypt = require("Bcrypt");
 
 
 app.get("/hash", async (req, res) => {
