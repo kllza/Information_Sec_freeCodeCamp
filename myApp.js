@@ -1,5 +1,6 @@
 const express = require('express');
 const helmet = require('helmet');
+const bcrypt = require("bcrypt");
 
 
 ninetyDaysInSeconds = 90*24*60*60;
@@ -32,8 +33,6 @@ app.use(helmet({
   dnsPrefetchControl: false     // disable
 }))
 
-
-const bcrypt = require("bcrypt");
 
 
 app.get("/hash", async (req, res) => {
